@@ -89,7 +89,7 @@ Setup completed!
 Com o Dropbox-Uploader configurado, vamos criar o script que fará o dump dos seus bancos de dados. Este script também está no repositório do GituHub. 
 
 cd /usr/local/bin
-git clone https://github.com/mysqlbox/MySQL-Backup.git
+git clone https://github.com/almirb/MySQL-Backup.git
 chmod 700 MySQL-Backup/Backup_MySQL.sh 
 ```
 
