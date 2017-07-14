@@ -95,7 +95,7 @@ sudo chmod 777 MySQL-Backup/tmp/
 sudo nano /var/log/mysql-backup.log    (salvar arquivo vazio)
 sudo chmod 777 /var/log/mysql-backup.log
 ```
-Para fazer o teste, rode o comando:
+Para fazer o teste, rode o comando (SEM sudo):
 ```
 ./Backup_MySQL.sh
 ```
