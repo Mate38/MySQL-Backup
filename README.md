@@ -95,6 +95,10 @@ sudo chmod 777 MySQL-Backup/tmp/
 sudo nano /var/log/mysql-backup.log    (salvar arquivo vazio)
 sudo chmod 777 /var/log/mysql-backup.log
 ```
+Para fazer o teste, rode o comando:
+```
+./Backup_MySQL.sh
+```
 
 Dentro do arquivo Shell, você deve colocar o usuário e senha do seu usuário de backup. Lembrando que este usuário não pode ter privilégios de administrador ou de escrita, apenas leitura. 
 
