@@ -11,11 +11,11 @@ Para que o nosso script consiga usar a API, precisamos instalar o curl. O curl �
 
 Para instalá-lo, basta executar o comando: 
 
-```yum install curl``` 
+```apt-get install curl``` 
 
 Você precisará do git para efetuar o download dos scripts. Para quem não conhece, o git é um sistema de controle de versão, gratuito e open source. Para você trabalhar com o GitHub ou BitBucket, você precisa ter o git instalado em sua máquina. Então vamos instalá-lo: 
 
-```yum install git``` 
+```apt-get install git``` 
 
 Com o curl e git instalados, precisamos configurar o nosso usuário de MySQL que fará os dumps dos nossos bancos via mysqldump. O mysqldump é um utilitário do MySQL que executa backups lógicos, produzindo um conjunto de instruções SQL que podem ser executadas para reproduzir as definições de objeto de banco de dados originais e os dados da tabela. Ele despeja um ou mais bancos de dados MySQL para backup. O comando mysqldump também pode gerar a saída em formato CSV, ou em formato XML. 
 
@@ -89,8 +89,11 @@ Setup completed!
 Com o Dropbox-Uploader configurado, vamos criar o script que fará o dump dos seus bancos de dados. Este script também está no repositório do GituHub. 
 
 cd /usr/local/bin
-git clone https://github.com/almirb/MySQL-Backup.git
-chmod 700 MySQL-Backup/Backup_MySQL.sh 
+sudo git clone https://github.com/almirb/MySQL-Backup.git
+sudo chmod 700 MySQL-Backup/Backup_MySQL.sh 
+sudo chmod 777 MySQL-Backup/tmp/
+sudo nano /var/log/mysql-backup.log    (salvar arquivo vazio)
+sudo chmod 777 /var/log/mysql-backup.log
 ```
 
 Dentro do arquivo Shell, você deve colocar o usuário e senha do seu usuário de backup. Lembrando que este usuário não pode ter privilégios de administrador ou de escrita, apenas leitura. 
@@ -103,6 +106,8 @@ SECRET="" #Senha do usuario
 ### Agendamento e log
 
 Após a configuração do script, basta adicionar uma rotina no cron. Para quem não conhece, o cron é um sistema de agendamento de tarefas do Linux. É nele que você configurará as rotinas do backup ou execução de algum script shell, perl, python, php etc. Sua utilização e sintaxe são bem simples, fáceis de decorar e usar. 
+
+*MUITO IMPORTANTE: NÃO RODAR O CRONTAB COM SUDO*
 
 ```crontab -e ```
 
