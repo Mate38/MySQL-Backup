@@ -97,6 +97,7 @@ sudo chmod 777 /var/log/mysql-backup.log
 ```
 Para fazer o teste, rode o comando (SEM sudo):
 ```
+cd /usr/local/bin
 ./Backup_MySQL.sh
 ```
 
