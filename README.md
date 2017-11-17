@@ -41,7 +41,7 @@ A API do Dropbox não é difícil de ser usada, a documentação é muito boa. �
 
 ```
 cd /usr/local/bin
-git clone https://github.com/mysqlbox/Dropbox-Uploader.git
+git clone https://github.com/andreafabrizi/Dropbox-Uploader.git
 cd Dropbox-Uploader
 chmod +x dropbox_uploader.sh
 ./dropbox_uploader.sh
@@ -51,38 +51,22 @@ Executando o shell script, serão solicitadas algumas informações, preencha-as
 
 ```
 ./dropbox_uploader.sh
-This is the first time you run this script.
+This is the first time you run this script, please follow the instructions:
 
-1) Open the following URL in your Browser, and log in using your account: https://www.dropbox.com/developers/apps
-2) Click on "Create App", then select "Dropbox API app"
-3) Now go on with the configuration, choosing the app permissions and access restrictions to your DropBox folder
-4) Enter the "App Name" that you prefer (e.g. MyUploader26630258426034)
+ 1) Open the following URL in your Browser, and log in using your account: https://www.dropbox.com/developers/apps
+ 2) Click on "Create App", then select "Dropbox API app"
+ 3) Now go on with the configuration, choosing the app permissions and access restrictions to your DropBox folder
+ 4) Enter the "App Name" that you prefer (e.g. MyUploader13884818027723)
 
-Now, click on the "Create App" button.
-When your new App is successfully created, please type the
-App Key, App Secret and the Permission type shown in the confirmation page:
+ Now, click on the "Create App" button.
 
-App key: SUAAPPKEY
-App secret: SUAAPPSECRET
+ When your new App is successfully created, please click on the Generate button
+ under the 'Generated access token' section, then copy and paste the new access token here:
 
-Permission type:
-App folder [a]: If you choose that the app only needs access to files it creates
-Full Dropbox [f]: If you choose that the app needs access to files already on Dropbox
+ # Access token: MYRANDOMACCESSTOKEN
 
-Permission type [a/f]: a
-
-> App key is SUAAPPKEY, App secret is SUAAPPSECRET and Access level is App Folder. Looks ok? [y/n]: y
-
-> Token request... OK
-
-Please open the following URL in your browser, and allow Dropbox Uploader
-to access your DropBox folder:
-
---> https://www.dropbox.com/1/oauth/authorize?oauth_token=TOKEN
-
-Press enter when done...
-
-> Access Token request... OK
+ > The access token is MYRANDOMACCESSTOKEN. Looks ok? [y/N]: y
+   The configuration has been saved.
 
 Setup completed! 
 
